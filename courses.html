@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Courses - Saurabh Institute</title>
+
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+    background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+}
+
+/* ✅ Navbar */
+.navbar {
+    background-color: #2c3e50;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #3498db;
+}
+
+/* ✅ Container */
+.container {
+    width: 70%;
+    margin: 20px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px gray;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+.course {
+    margin: 15px 0;
+    padding: 15px;
+    border-left: 5px solid #3498db;
+    background: #ecf5ff;
+}
+
+/* ✅ Button */
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2ecc71;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ✅ Navbar -->
+<div class="navbar">
+    <a href="home.html">🏠 Home</a>
+    <a href="website.html">📖 Institute</a>
+    <a href="index.html">💳 Payment</a>
+    <a href="study.html">📚 Study</a>
+    <a href="courses.html">🎓 Courses</a>
+</div>
+
+<!-- ✅ Courses Section -->
+<div class="container">
+<h1>🎓 Our Courses</h1>
+
+<div class="course">
+<b>✅ DevOps Course:</b> Learn CI/CD, Docker, Kubernetes, AWS  
+<br>
+<button onclick="goToPayment()">Enroll Now 💳</button>
+</div>
+
+<div class="course">
+<b>✅ Java Development:</b> Core Java, Spring Boot, Microservices  
+<br>
+<button onclick="goToPayment()">Enroll Now 💳</button>
+</div>
+
+<div class="course">
+<b>✅ Frontend Development:</b> HTML, CSS, JavaScript, React  
+<br>
+<button onclick="goToPayment()">Enroll Now 💳</button>
+</div>
+
+<div class="course">
+<b>✅ Cloud Computing:</b> AWS, Azure, GCP basics & deployment  
+<br>
+<button onclick="goToPayment()">Enroll Now 💳</button>
+</div>
+
+</div>
+
+<!-- ✅ JavaScript -->
+<script>
+function goToPayment() {
+    window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
