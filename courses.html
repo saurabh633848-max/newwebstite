@@ -7,7 +7,22 @@
 body {
     font-family: Arial;
     margin: 0;
-    background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+
+    /* ✅ Background Image */
+    background: url('KansasCity_1440x742.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* ✅ Dark overlay for readability */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: -1;
 }
 
 /* ✅ Navbar */
@@ -19,8 +34,9 @@ body {
 
 .navbar a {
     color: white;
-    padding: 14px 20px;
+    padding: 15px 20px;
     text-decoration: none;
+    font-size: 18px;
 }
 
 .navbar a:hover {
@@ -29,39 +45,58 @@ body {
 
 /* ✅ Container */
 .container {
-    width: 70%;
-    margin: 20px auto;
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 4px 4px 10px gray;
+    width: 75%;
+    margin: 40px auto;
+    background: rgba(255,255,255,0.95);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px black;
 }
 
 h1 {
     text-align: center;
     color: #2c3e50;
+    font-size: 34px;
 }
 
+/* ✅ Course Box */
 .course {
-    margin: 15px 0;
-    padding: 15px;
-    border-left: 5px solid #3498db;
+    margin: 20px 0;
+    padding: 20px;
+    border-left: 6px solid #3498db;
     background: #ecf5ff;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* ✅ Heading color */
+.course b {
+    color: #e74c3c;
+    font-size: 22px;
+}
+
+/* ✅ Duration + Fees */
+.details {
+    color: #16a085;
+    font-size: 18px;
 }
 
 /* ✅ Button */
 button {
-    padding: 10px 20px;
-    margin-top: 10px;
-    background-color: #27ae60;
+    padding: 12px 25px;
+    margin-top: 12px;
+    background: linear-gradient(to right, #27ae60, #2ecc71);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 button:hover {
-    background-color: #2ecc71;
+    background: linear-gradient(to right, #2ecc71, #27ae60);
 }
 </style>
 </head>
@@ -70,19 +105,21 @@ button:hover {
 
 <!-- ✅ Navbar -->
 <div class="navbar">
-    <a href="home.html">🏠 Home</a>
-    <a href="website.html">📖 Institute</a>
-    <a href="index.html">💳 Payment</a>
-    <a href="study.html">📚 Study</a>
-    <a href="courses.html">🎓 Courses</a>
+    <a href="#">🏠 Home</a>
+    <a href="#">📖 Institute</a>
+    <a href="#">💳 Payment</a>
+    <a href="#">📚 Study</a>
+    <a href="#">🎓 Courses</a>
 </div>
 
-<!-- ✅ Courses Section -->
+<!-- ✅ Courses -->
 <div class="container">
 <h1>🎓 Our Courses</h1>
 
 <div class="course">
 <b>✅ DevOps Course:</b> Learn CI/CD, Docker, Kubernetes, AWS  
+<br>
+<span class="details">Total Duration: 6 Months | Fees: ₹12,000</span>
 <br>
 <button onclick="goToPayment()">Enroll Now 💳</button>
 </div>
@@ -90,17 +127,23 @@ button:hover {
 <div class="course">
 <b>✅ Java Development:</b> Core Java, Spring Boot, Microservices  
 <br>
+<span class="details">Total Duration: 1.2 Years | Fees: ₹40,000</span>
+<br>
 <button onclick="goToPayment()">Enroll Now 💳</button>
 </div>
 
 <div class="course">
 <b>✅ Frontend Development:</b> HTML, CSS, JavaScript, React  
 <br>
+<span class="details">Total Duration: 1 Year | Fees: ₹30,000</span>
+<br>
 <button onclick="goToPayment()">Enroll Now 💳</button>
 </div>
 
 <div class="course">
 <b>✅ Cloud Computing:</b> AWS, Azure, GCP basics & deployment  
+<br>
+<span class="details">Total Duration: 1.2 Years | Fees: ₹40,000</span>
 <br>
 <button onclick="goToPayment()">Enroll Now 💳</button>
 </div>
@@ -110,7 +153,8 @@ button:hover {
 <!-- ✅ JavaScript -->
 <script>
 function goToPayment() {
-    window.location.href = "index.html";
+    alert("Redirecting to Payment Page...");
+    window.location.href = "payment.html"; // create this later
 }
 </script>
 
